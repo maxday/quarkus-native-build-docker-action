@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build . -f Dockerfile.buildNativeApp -t native-build-image
+docker build . -f /Dockerfile.buildNativeApp -t native-build-image
