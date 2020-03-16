@@ -1,0 +1,5 @@
+name: 'Build Quarkus native image'
+description: 'Build Quarkus native image'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
