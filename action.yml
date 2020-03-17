@@ -1,5 +1,15 @@
-name: 'Build Quarkus native image'
-description: 'Build Quarkus native image'
+name: 'Dockerize a Quarkus native app'
+description: 'Github Action to Dockerize a Quarkus native app'
+author: 'Maxime DAVID <got2bex@gmail.com>'
+inputs:
+  tag:
+    description: 'Docker tag to set once the image is built'
+    required: true
+outputs:
+  image:
+    description: 'Tagged docker image'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.tag }}
