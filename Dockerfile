@@ -4,7 +4,7 @@ RUN apk update \
   && apk upgrade \
   && apk add --no-cache git bash
 
-COPY Dockerfile.buildNativeApp /Dockerfile.buildNativeApp 
+COPY Dockerfile.default /Dockerfile 
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
