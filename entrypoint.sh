@@ -7,9 +7,11 @@ DOCKER_FILE_TO_USE="/Dockerfile"
 
 if [ -n "$DOCKERFILE_PATH" ]; then
   if [ -f $DOCKERFILE_PATH ] ; then
+    echo "Dockerfile found"
     DOCKER_FILE_TO_USE=$DOCKERFILE_PATH
   else
     echo "Imposible to find Dockerfile at path : $DOCKERFILE_PATH"
+    exit 1
   fi
 fi
 
