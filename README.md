@@ -6,7 +6,13 @@ A default Dockerfile is used but you can specify a custom Docker via the *docker
 
 A *app-runner* binary file will be generated after the execution of this action.
 
-## Exemple d'utilisation
+### Parameters
+
+| Argument   | Description |
+|--------|-------------|
+| dockerfilePath  | Path to Dockerfile. _Optional_  |
+
+### Exemple d'utilisation
 
 ```
 on: [push]
