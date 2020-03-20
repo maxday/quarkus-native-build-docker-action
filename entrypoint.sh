@@ -9,6 +9,8 @@ if [ ! -z $DOCKERFILE_PATH  &&  -f $DOCKERFILE_PATH ]; then
   echo "Impossible to find the Dockerfile at $DOCKERFILE_PATH"
   exit 1
 else
+  echo "dockerfilePafined and exits"
+  echo $DOCKERFILE_PATH
   DOCKER_FILE_TO_USE=$DOCKERFILE_PATH
 fi
 
