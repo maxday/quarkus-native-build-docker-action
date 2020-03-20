@@ -16,5 +16,8 @@ if [ -n "$DOCKERFILE_PATH" ]; then
 fi
 
 docker build . -f $DOCKER_FILE_TO_USE -t native-build-image
-id=$(docker create native-build-image)
-docker cp $id:/usr/src/app/target/app-runner app-runner
+
+RUNNER_NAME=$(docker run native-build-image ls /usr/src/app/target | grep .-runner)
+ID=$(docker create native-build-image)
+
+docker cp $ID:/usr/src/app/target/$RUNNER_NAME app-runner
