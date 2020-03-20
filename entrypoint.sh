@@ -5,13 +5,12 @@ set -e
 DOCKERFILE_PATH=$1
 DOCKER_FILE_TO_USE="/Dockerfile"
 
-if [ ! -z $DOCKERFILE_PATH  &&  -f $DOCKERFILE_PATH ]; then
-  echo "Impossible to find the Dockerfile at $DOCKERFILE_PATH"
-  exit 1
-else
-  echo "dockerfilePafined and exits"
-  echo $DOCKERFILE_PATH
-  DOCKER_FILE_TO_USE=$DOCKERFILE_PATH
+if [ -n "$DOCKERFILE_PATH" ]; then
+  if [ -f $DOCKERFILE_PATH ] ; then
+    DOCKER_FILE_TO_USE=$DOCKERFILE_PATH
+  else
+    echo "Imposible to find Dockerfile at path : $DOCKERFILE_PATH"
+  fi
 fi
 
 docker build . -f $DOCKER_FILE_TO_USE -t native-build-image
