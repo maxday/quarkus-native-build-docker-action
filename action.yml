@@ -1,5 +1,7 @@
 name: 'Build Quarkus native image'
 description: 'Build Quarkus native image'
+icon: 'box'
+color: 'yellow'
 inputs:
   dockerfilePath:
     description: 'relative path to the Dockerfile you want to use - leave blank for default'
