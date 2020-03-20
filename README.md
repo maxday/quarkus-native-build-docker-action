@@ -4,7 +4,7 @@ Action to build a native executable from your Quarkus app.
 
 A default Dockerfile is used but you can specify a custom Docker via the *dockerfilePath* option.
 
-A *app-runner* binary file will be generated after the execetion of this action.
+A *app-runner* binary file will be generated after the execution of this action.
 
 ## Exemple d'utilisation
 
