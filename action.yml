@@ -4,6 +4,9 @@ branding:
   icon: 'box'
   color: 'yellow'
 inputs:
+  outputName:
+    description: mame of the resulting executable binary file
+    required: true
   dockerfilePath:
     description: 'relative path to the Dockerfile you want to use - leave blank for default'
     required: false
@@ -11,4 +14,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile' 
   args: 
+    - ${{ inputs.outputName }}
     - ${{ inputs.dockerfilePath }}
