@@ -10,6 +10,7 @@ A *app-runner* binary file will be generated after the execution of this action.
 
 | Argument   | Description |
 |--------|-------------|
+| outputName  | Name of the resulting executable binary file. _Required_  |
 | dockerfilePath  | Path to Dockerfile. _Optional_  |
 
 ### Exemple d'utilisation
@@ -26,6 +27,7 @@ jobs:
         uses: actions/checkout@master
       - name: Build native executable and upload it as an artifact
         uses: maxday/quarkus-native-build-docker-action@1
+          outputName: myApp-runner
           dockerfilePath: Dockerfile
 
 ```
