@@ -5,7 +5,7 @@ branding:
   color: 'yellow'
 inputs:
   outputName:
-    description: mame of the resulting executable binary file
+    description: name of the resulting executable binary file
     required: true
   dockerfilePath:
     description: 'relative path to the Dockerfile you want to use - leave blank for default'
