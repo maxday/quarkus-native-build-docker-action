@@ -1,5 +1,5 @@
-name: 'Build Quarkus native image'
-description: 'Build Quarkus native image'
+name: 'Build a Quarkus native application'
+description: 'Build a Quarkus native application'
 branding:
   icon: 'box'
   color: 'yellow'
